@@ -1,3 +1,5 @@
+'''Nesse projeto, acesso o google, extraio os valores de dolar e euro, e salvo os valores no excel'''
+
 from selenium import webdriver as opcao_selenium
 from selenium.webdriver.common.keys import Keys
 import pyautogui as pausaPc
