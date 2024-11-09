@@ -20,7 +20,7 @@ pausaPc.sleep(1)
 meuNavegador.find_element(By.NAME, 'q').send_keys(Keys.RETURN)
 pausaPc.sleep(1)
 
-valorDolar = meuNavegador.find_elements(By.CSS_SELECTOR, '#rso > div:nth-child(2) > div > block-component > div > div.dG2XIf.XzTjhb > div > div > div > div > div.ifM9O > div > div > div > div > div.wDYxhc > div > span.ILfuVd > span > b')[0].text
+valorDolar = meuNavegador.find_elements(By.XPATH, '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]')[0].text
 pausaPc.sleep(1)
 
 print('O valor do dolar é: ', valorDolar)
@@ -38,7 +38,9 @@ meuNavegador.find_element(By.NAME, 'q').send_keys('Valor do euro hoje')
 pausaPc.sleep(2)
 
 meuNavegador.find_element(By.NAME, 'q').send_keys(Keys.RETURN)
-valorEuro = meuNavegador.find_elements(By.CSS_SELECTOR, '#rso > div:nth-child(2) > div > block-component > div > div.dG2XIf.XzTjhb > div > div > div > div > div.ifM9O > div > div > div > div > div:nth-child(2) > div > span > span > b')[0].text
+pausaPc.sleep(1)
+
+valorEuro = meuNavegador.find_elements(By.XPATH, '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]')[0].text
 
 print('O valor do euro é: ', valorEuro)
 
